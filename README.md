@@ -1,51 +1,60 @@
-# Welcome to your Convex + Next.js + Clerk app
+# 🧾 Receiptly — AI-Powered Receipt Scanner
 
-This is a [Convex](https://convex.dev/) project created with [`npm create convex`](https://www.npmjs.com/package/create-convex).
+> Scan, analyze, and organize your receipts with AI-powered precision.
 
-After the initial setup (<2 minutes) you'll have a working full-stack app using:
+👉 **Live Demo**: [receipt-tracker-blush-ten.vercel.app](https://receipt-tracker-blush-ten.vercel.app)
 
-- Convex as your backend (database, server logic)
-- [React](https://react.dev/) as your frontend (web page interactivity)
-- [Next.js](https://nextjs.org/) for optimized web hosting and page routing
-- [Tailwind](https://tailwindcss.com/) for building great looking accessible UI
-- [Clerk](https://clerk.com/) for authentication
+---
 
-## Get started
+## ✨ Features
 
-If you just cloned this codebase and didn't use `npm create convex`, run:
+- 📄 Drag & drop PDF receipt upload
+- 🤖 AI extraction of merchant, items, and prices
+- 🗂️ Receipt dashboard with AI summaries
+- 🔐 Secure authentication with Clerk
+- ⚡ Background processing with Inngest
 
+## 🛠️ Tech Stack
+
+Next.js · Convex · Clerk · Inngest · OpenAI · Schematic · Tailwind CSS · Vercel
+
+---
+
+## 🚀 Getting Started
+
+```bash
+git clone https://github.com/YOUR_USERNAME/receipt-tracker.git
+cd receipt-tracker
+pnpm install
+cp .env.example .env.local  # fill in your keys
+npx convex dev
+pnpm dev
 ```
-npm install
-npm run dev
+
+## 🔑 Environment Variables
+
+```env
+NEXT_PUBLIC_CONVEX_URL=
+CONVEX_DEPLOYMENT=
+CONVEX_DEPLOY_KEY=
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=
+CLERK_SECRET_KEY=
+CLERK_JWT_ISSUER_DOMAIN=
+OPENAI_API_KEY=
+INNGEST_EVENT_KEY=
+INNGEST_SIGNING_KEY=
+NEXT_PUBLIC_SCHEMATIC_KEY=
+SCHEMATIC_API_KEY=
 ```
 
-If you're reading this README on GitHub and want to use this template, run:
+## 🔄 How It Works
 
-```
-npm create convex@latest -- -t nextjs-clerk
-```
+1. User uploads a PDF receipt
+2. File is stored in Convex
+3. Inngest job extracts text with pdf2json
+4. OpenAI analyzes and extracts structured data
+5. Data is displayed in the dashboard
 
-Then:
+---
 
-1. Open your app. There should be a "Claim your application" button from Clerk in the bottom right of your app.
-2. Follow the steps to claim your application and link it to this app.
-3. Follow step 3 in the [Convex Clerk onboarding guide](https://docs.convex.dev/auth/clerk#get-started) to create a Convex JWT template.
-4. Uncomment the Clerk provider in `convex/auth.config.ts`
-5. Paste the Issuer URL as `CLERK_JWT_ISSUER_DOMAIN` to your dev deployment environment variable settings on the Convex dashboard (see [docs](https://docs.convex.dev/auth/clerk#configuring-dev-and-prod-instances))
-
-If you want to sync Clerk user data via webhooks, check out this [example repo](https://github.com/thomasballinger/convex-clerk-users-table/).
-
-## Learn more
-
-To learn more about developing your project with Convex, check out:
-
-- The [Tour of Convex](https://docs.convex.dev/get-started) for a thorough introduction to Convex principles.
-- The rest of [Convex docs](https://docs.convex.dev/) to learn about all Convex features.
-- [Stack](https://stack.convex.dev/) for in-depth articles on advanced topics.
-
-## Join the community
-
-Join thousands of developers building full-stack apps with Convex:
-
-- Join the [Convex Discord community](https://convex.dev/community) to get help in real-time.
-- Follow [Convex on GitHub](https://github.com/get-convex/), star and contribute to the open-source implementation of Convex.
+Built with ❤️ using Next.js, Convex, Clerk, Inngest, and OpenAI.
