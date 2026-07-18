@@ -1,33 +1,43 @@
 # 🧾 Receiptly — AI-Powered Receipt Scanner
 
-> Scan, analyze, and organize your receipts with AI-powered precision.
+Scan, analyze, and organize your receipts with AI-powered precision.
 
-👉 **Live Demo**: [receipt-tracker-blush-ten.vercel.app](https://receipt-tracker-blush-ten.vercel.app)
-
----
+🌐 **Live Demo:** https://receipt-tracker-blush-ten.vercel.app
 
 ## ✨ Features
 
 - 📄 Drag & drop PDF receipt upload
-- 🤖 AI extraction of merchant, items, and prices
-- 🗂️ Receipt dashboard with AI summaries
+- 🤖 AI-powered extraction of merchant, items, dates, and prices
+- 🗂️ Receipt dashboard with organized expense history
 - 🔐 Secure authentication with Clerk
 - ⚡ Background processing with Inngest
+- 📱 Responsive user interface
 
 ## 🛠️ Tech Stack
 
-Next.js · Convex · Clerk · Inngest · OpenAI · Schematic · Tailwind CSS · Vercel
-
----
+- Next.js
+- React
+- TypeScript
+- Tailwind CSS
+- Convex
+- Clerk
+- Inngest
+- OpenAI API
+- Schematic
+- Vercel
 
 ## 🚀 Getting Started
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/receipt-tracker.git
-cd receipt-tracker
+git clone https://github.com/dua627313-cloud/Receiptly.git
+cd Receiptly
+
 pnpm install
-cp .env.example .env.local  # fill in your keys
+
+cp .env.example .env.local
+
 npx convex dev
+
 pnpm dev
 ```
 
@@ -49,12 +59,30 @@ SCHEMATIC_API_KEY=
 
 ## 🔄 How It Works
 
-1. User uploads a PDF receipt
-2. File is stored in Convex
-3. Inngest job extracts text with pdf2json
-4. OpenAI analyzes and extracts structured data
-5. Data is displayed in the dashboard
+1. User uploads a receipt.
+2. The file is securely stored.
+3. Background processing extracts receipt text.
+4. OpenAI analyzes the receipt and returns structured information.
+5. Receipt details are saved and displayed in the dashboard.
 
----
+## 🤖 How OpenAI Models Were Used
 
-Built with ❤️ using Next.js, Convex, Clerk, Inngest, and OpenAI.
+During development of Receiptly, OpenAI tools were used to accelerate development and improve the project.
+
+### GPT-5.6
+- Brainstormed application architecture and feature ideas.
+- Helped refine prompts for accurate receipt data extraction.
+- Assisted with debugging application logic and improving code quality.
+- Suggested UI improvements and documentation.
+
+### Codex
+- Assisted with generating boilerplate code.
+- Helped debug Next.js and TypeScript issues.
+- Suggested improvements for API integration and project structure.
+- Accelerated implementation of application features.
+
+The project design, implementation, testing, and final integration were completed by the project author.
+
+## ❤️ Built for OpenAI Build Week
+
+Receiptly demonstrates how AI can simplify everyday expense management by converting paper receipts into organized, searchable digital records using modern web technologies and OpenAI models.
